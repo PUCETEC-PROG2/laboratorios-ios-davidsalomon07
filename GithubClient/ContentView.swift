@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  GithubClient
 //
-//  Created by Usuario invitado on 13/1/26.
+//  Created by David Salomon on 13/1/26.
 //
 
 import SwiftUI
@@ -12,15 +12,19 @@ struct ContentView: View {
         TabView {
             RepoList()
                 .tabItem {
-                    Label("Repositorios", systemImage: "rectangle.stack")
+                    Label("Repositorios",
+                    systemImage:
+                    "rectangle.stack")
                 }
             RepoForm()
                 .tabItem {
-                    Label("Nuevo Repositorio", systemImage: "plus")
+                    Label("Nuevo Repositorio",
+                          systemImage: "plus")
                 }
             Profile()
                 .tabItem {
-                    Label("Perfil", systemImage: "person.crop.circle")
+                    Label("Perfil",
+                    systemImage: "person.crop.circle")
                 }
         }
     }

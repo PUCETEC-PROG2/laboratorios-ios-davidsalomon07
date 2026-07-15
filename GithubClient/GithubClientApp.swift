@@ -1,17 +1,33 @@
 //
-//  GithubClientApp.swift
 //  GithubClient
 //
-//  Created by Usuario invitado on 13/1/26.
+//  Created by David Salomon on 8/7/26.
 //
 
 import SwiftUI
 
-@main
-struct GithubClientApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+struct Profile: View {
+    var body: some View {
+        NavigationStack{
+            VStack{
+                Text("David Salomon")
+                    .font(.title)
+                Image(uiImage: .githubLogo)
+                    .resizable()
+                    .scaledToFit()
+                Text("david_salomon07")
+                    .font(.headline)
+                    .padding(.vertical)
+                Text("Mi nombre es David, y me gusta programar.")
+                    .font(.caption)
+            }
+            .padding()
+            .navigationTitle("Perfil")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
+}
+
+#Preview {
+    Profile()
 }

@@ -1,8 +1,7 @@
 //
-//  RepoForm.swift
 //  GithubClient
 //
-//  Created by Usuario invitado on 8/7/26.
+//  Created by David Salomon on 8/7/26.
 //
 
 import SwiftUI
@@ -12,27 +11,36 @@ struct RepoForm: View {
     @State private var repoDescription: String = ""
     
     var body: some View {
-        NavigationStack {
-            VStack {
+        NavigationStack{
+            VStack{
                 Spacer()
-                TextField("Formulario de repositorio", text: $repoName)
+                TextField(
+                    "", text: $repoName,
+                    prompt: Text("Nombre del repositorio")
+                        .foregroundStyle(.accent.opacity(0.6))
+                )
                     .textFieldStyle(.roundedBorder)
                     .padding(.vertical)
                 
-                TextField("Descripcion del repositorio", text: $repoDescription)
+                TextField("", text: $repoDescription,
+                prompt: Text("Descripción del repositorio")
+                    .foregroundStyle(.accent.opacity(0.6))
+                )
                     .textFieldStyle(.roundedBorder)
                     .lineLimit(4...10)
                     .padding(.vertical)
                 Spacer()
                 Button(action: {
-                    print ("Boton aplastado")
+                    print("Botón Aplastado")
                 }){
-                    Label("Guardar Repo", systemImage: "square.and.arrow.down")
+                    
+                    Label("Guardar repo", systemImage: "square.and.arrow.down")
                         .padding(.all, 8)
                 }
                 .buttonStyle(.borderedProminent)
             }
-            .navigationTitle("Formulario")
+            .padding()
+            .navigationTitle("Formulario de repositorio")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

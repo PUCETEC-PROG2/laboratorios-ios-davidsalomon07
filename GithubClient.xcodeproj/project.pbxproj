@@ -6,8 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AC652E153008374C006825E2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AC652E143008374C006825E2 /* Alamofire */; };
+		AC652E2230083C9C006825E2 /* .gitignore.txt in Resources */ = {isa = PBXBuildFile; fileRef = AC652E2130083C96006825E2 /* .gitignore.txt */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		AC15474E2F16A0A300962CDB /* GithubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC652E2130083C96006825E2 /* .gitignore.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC652E153008374C006825E2 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +39,7 @@
 		AC1547452F16A0A300962CDB = {
 			isa = PBXGroup;
 			children = (
+				AC652E2130083C96006825E2 /* .gitignore.txt */,
 				AC1547502F16A0A300962CDB /* GithubClient */,
 				AC15474F2F16A0A300962CDB /* Products */,
 			);
@@ -65,6 +73,7 @@
 			);
 			name = GithubClient;
 			packageProductDependencies = (
+				AC652E143008374C006825E2 /* Alamofire */,
 			);
 			productName = GithubClient;
 			productReference = AC15474E2F16A0A300962CDB /* GithubClient.app */;
@@ -94,6 +103,9 @@
 			);
 			mainGroup = AC1547452F16A0A300962CDB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AC652E133008374C006825E2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AC15474F2F16A0A300962CDB /* Products */;
 			projectDirPath = "";
@@ -109,6 +121,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC652E2230083C9C006825E2 /* .gitignore.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +335,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC652E133008374C006825E2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC652E143008374C006825E2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC652E133008374C006825E2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC1547462F16A0A300962CDB /* Project object */;
 }
