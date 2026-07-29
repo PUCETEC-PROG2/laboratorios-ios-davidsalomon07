@@ -83,6 +83,30 @@ class GithubService {
         }
     }
     
+    func getUserProfile() async throws -> GithubUser {
+            let response = await AF.request(
+                "\(baseURL)/user",
+                method: .get,
+                headers: headers
+            ).validate(statusCode: 200..<300)
+                .serializingDecodable(GithubUser.self)
+                .response
+            
+            if let data = response.data,
+               let json = String(data: data, encoding: .utf8) {
+                print("**** Respuesta al obtener perfil de usuario: ****")
+                print(json)
+            }
+            
+            switch response.result {
+            case .success(let user):
+                return user
+            case .failure(let error):
+                print("Error en el servicio de Github (Perfil)")
+                print(error)
+                throw error
+            }
+        }
     
 }
 

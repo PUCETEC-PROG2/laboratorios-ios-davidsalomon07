@@ -5,6 +5,6 @@
 	<key>API_BASE_URL</key>
 	<string>https://api.guthub.com</string>
 	<key>API_TOKEN</key>
-	<string>XXXXXXXXXXXXXXXXX</string>
+	<string>xxxxxxxxxxxxxxxxxxxxx</string>
 </dict>
 </plist>
