@@ -49,5 +49,3 @@ enum AppConfig {
         return value
     }
 }
-
-// PRUEBA

@@ -60,7 +60,7 @@ struct Profile: View {
             .padding()
             .navigationTitle("Perfil")
             .navigationBarTitleDisplayMode(.inline)
-            .onAppear {
+            .onAppear {      //Sin esto no carga la imagen, se quedaria cargando
                 viewModel.fetchProfile()
             }
         }
